@@ -1,5 +1,7 @@
 # Perturbation Composition Lab
 
+[![Reproduction checks](https://github.com/aarnavbhat23/perturbation-composition-lab/actions/workflows/composition.yml/badge.svg)](https://github.com/aarnavbhat23/perturbation-composition-lab/actions/workflows/composition.yml)
+
 Can measured single-gene responses predict an unseen two-gene combination?
 
 This project aggregates **91,205 cells across 5,045 genes** from the GEARS-preprocessed Norman CRISPRa dataset. It compares no perturbation, single-gene additivity, a ridge residual model, and a permutation-invariant neural residual model. All cells belonging to a combination stay together; **26 complete combinations** are held out.
