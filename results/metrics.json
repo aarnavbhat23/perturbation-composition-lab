@@ -1,0 +1,63 @@
+{
+  "source_cells": 91205,
+  "genes": 5045,
+  "single_genes": 105,
+  "eligible_combinations": 131,
+  "excluded_combinations": [],
+  "latent_dimensions": 32,
+  "split_combinations": {
+    "test": 26,
+    "train": 79,
+    "validation": 26
+  },
+  "selected_epochs": [
+    106,
+    16,
+    32
+  ],
+  "models": {
+    "no_perturbation": {
+      "mean_condition_rmse": 0.08263047648450503,
+      "paired_rmse_difference_vs_additive": 0.04387519719938819,
+      "condition_bootstrap_95_interval": [
+        0.03462755102216481,
+        0.05168581184787818
+      ],
+      "mean_oracle_top20_rmse": 0.7985110993568714
+    },
+    "single_gene_additivity": {
+      "mean_condition_rmse": 0.038755279285116837,
+      "paired_rmse_difference_vs_additive": 0.0,
+      "condition_bootstrap_95_interval": [
+        0.0,
+        0.0
+      ],
+      "mean_oracle_top20_rmse": 0.2378880802828532
+    },
+    "ridge_residual": {
+      "mean_condition_rmse": 0.033632587641477585,
+      "paired_rmse_difference_vs_additive": -0.0051226916436392525,
+      "condition_bootstrap_95_interval": [
+        -0.01095772282077143,
+        -0.0006029267732698788
+      ],
+      "mean_oracle_top20_rmse": 0.18078232527925417
+    },
+    "symmetric_neural_residual": {
+      "mean_condition_rmse": 0.032908735796809196,
+      "paired_rmse_difference_vs_additive": -0.005846543488307641,
+      "condition_bootstrap_95_interval": [
+        -0.010183773760218173,
+        -0.0026454341365024473
+      ],
+      "mean_oracle_top20_rmse": 0.18705329184348768
+    }
+  },
+  "neural_vs_ridge": {
+    "mean_condition_rmse_difference": -0.0007238518446683925,
+    "condition_bootstrap_95_interval": [
+      -0.002249423733267656,
+      0.0008318019260723905
+    ]
+  }
+}

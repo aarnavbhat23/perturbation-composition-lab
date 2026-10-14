@@ -1,0 +1,13 @@
+{
+  "source": "https://dataverse.harvard.edu/api/access/datafile/6154020",
+  "processed_h5ad_sha256": "23ffb0fac6a847ff927cf7509d80d85052bfefbfb97610786a2dafaaefa0b6a0",
+  "cells": 91205,
+  "genes": 5045,
+  "canonical_conditions": 237,
+  "upstream_cell_type_labels": [
+    "A549"
+  ],
+  "identity_note": "GEARS export labels cells A549; Norman et al. original experiment is K562. This project does not use the cell_type field.",
+  "expression_note": "Means of the upstream processed expression scale; not raw counts or fold changes.",
+  "uncertainty_note": "Cell-level standard errors are descriptive, not independent biological-replicate uncertainty."
+}
