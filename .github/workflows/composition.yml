@@ -15,3 +15,4 @@ jobs:
       - run: python -m unittest discover -s tests -v
       - run: python replay.py
       - run: python predict.py CBL CNN1 --output /tmp/composition.csv
+      - run: python replication_replay.py

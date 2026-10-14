@@ -1,0 +1,113 @@
+{
+  "comparison": [
+    {
+      "dataset": "norman",
+      "setting": "random",
+      "method": "additive",
+      "partitions": 5,
+      "mean_rmse": 0.039176528872205615,
+      "min_rmse": 0.0343030020952797,
+      "max_rmse": 0.046116646235952
+    },
+    {
+      "dataset": "norman",
+      "setting": "random",
+      "method": "matched_ridge",
+      "partitions": 5,
+      "mean_rmse": 0.038222036596674135,
+      "min_rmse": 0.0337578553992968,
+      "max_rmse": 0.0432104236947802
+    },
+    {
+      "dataset": "norman",
+      "setting": "random",
+      "method": "neural_ensemble",
+      "partitions": 5,
+      "mean_rmse": 0.03419362256446704,
+      "min_rmse": 0.0311863017626679,
+      "max_rmse": 0.0385838211872256
+    },
+    {
+      "dataset": "norman",
+      "setting": "heldout-combination-gene",
+      "method": "additive",
+      "partitions": 5,
+      "mean_rmse": 0.0399650803217758,
+      "min_rmse": 0.0290583942085504,
+      "max_rmse": 0.0642587119205431
+    },
+    {
+      "dataset": "norman",
+      "setting": "heldout-combination-gene",
+      "method": "matched_ridge",
+      "partitions": 5,
+      "mean_rmse": 0.03729268724757308,
+      "min_rmse": 0.024345539137721,
+      "max_rmse": 0.0523331351578235
+    },
+    {
+      "dataset": "norman",
+      "setting": "heldout-combination-gene",
+      "method": "neural_ensemble",
+      "partitions": 5,
+      "mean_rmse": 0.03325479430682724,
+      "min_rmse": 0.0239589909091591,
+      "max_rmse": 0.0485442014919085
+    },
+    {
+      "dataset": "wessels",
+      "setting": "random",
+      "method": "additive",
+      "partitions": 5,
+      "mean_rmse": 0.1085737898945808,
+      "min_rmse": 0.1027010400449076,
+      "max_rmse": 0.112763114994572
+    },
+    {
+      "dataset": "wessels",
+      "setting": "random",
+      "method": "matched_ridge",
+      "partitions": 5,
+      "mean_rmse": 0.0886157854430137,
+      "min_rmse": 0.0850161587999713,
+      "max_rmse": 0.0903040187493447
+    },
+    {
+      "dataset": "wessels",
+      "setting": "random",
+      "method": "neural_ensemble",
+      "partitions": 5,
+      "mean_rmse": 0.087644430730612,
+      "min_rmse": 0.0844035289220271,
+      "max_rmse": 0.0897950191170938
+    },
+    {
+      "dataset": "wessels",
+      "setting": "heldout-combination-gene",
+      "method": "additive",
+      "partitions": 5,
+      "mean_rmse": 0.10490805676265158,
+      "min_rmse": 0.0927598029375076,
+      "max_rmse": 0.1249469597088663
+    },
+    {
+      "dataset": "wessels",
+      "setting": "heldout-combination-gene",
+      "method": "matched_ridge",
+      "partitions": 5,
+      "mean_rmse": 0.09352333222193351,
+      "min_rmse": 0.0825163619592785,
+      "max_rmse": 0.1199811987186733
+    },
+    {
+      "dataset": "wessels",
+      "setting": "heldout-combination-gene",
+      "method": "neural_ensemble",
+      "partitions": 5,
+      "mean_rmse": 0.09093317955486019,
+      "min_rmse": 0.0822250586934387,
+      "max_rmse": 0.1137281452354632
+    }
+  ],
+  "note": "Means/min/max across dependent partitions; not biological replicate intervals."
+}

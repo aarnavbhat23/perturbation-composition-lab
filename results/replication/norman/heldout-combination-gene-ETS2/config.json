@@ -1,0 +1,14 @@
+{
+  "dataset_sha256": "b05525fb6190ab570d3fbbe9792149480df6ea1b82a47ecaf2a26f644f005afb",
+  "algorithm": "matched-residual-v1",
+  "ridge_alpha": 10.0,
+  "neural_seeds": [
+    311,
+    312,
+    313
+  ],
+  "max_epochs": 500,
+  "early_stopping_patience": 40,
+  "feature_basis": "training targets and known single references",
+  "gene_holdout": "highest five combination-degree genes; known singles allowed"
+}

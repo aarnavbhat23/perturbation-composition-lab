@@ -1,0 +1,35 @@
+{
+  "datasets": {
+    "norman": {
+      "source_cells": 91205,
+      "genes": 5045,
+      "single_genes": 105,
+      "eligible_pairs": 131,
+      "excluded_missing_single": [],
+      "selected_gene_holdouts": [
+        "PTPN12",
+        "CEBPE",
+        "KLF1",
+        "UBASH3B",
+        "ETS2"
+      ],
+      "minimum_condition_cell_count": 49
+    },
+    "wessels": {
+      "source_cells": 30707,
+      "genes": 5000,
+      "single_genes": 28,
+      "eligible_pairs": 158,
+      "excluded_missing_single": [],
+      "selected_gene_holdouts": [
+        "MED24",
+        "SSRP1",
+        "SMARCD1",
+        "DOT1L",
+        "EP300"
+      ],
+      "minimum_condition_cell_count": 15
+    }
+  },
+  "note": "Twenty partitions are dependent repeated evaluations, not twenty independent datasets. Held-out combination genes have measured single references."
+}

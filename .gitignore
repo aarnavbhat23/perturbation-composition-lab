@@ -5,3 +5,4 @@ __pycache__/
 data/*.h5ad
 data/*.zip
 prediction.csv
+data/wessels-raw/

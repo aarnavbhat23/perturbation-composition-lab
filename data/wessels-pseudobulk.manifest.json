@@ -1,0 +1,40 @@
+{
+  "source": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE213nnn/GSE213957/suppl/GSE213957_THP1-CaRPool-seq_and_GSE213957_HEX293FTstabRNA.tar.gz",
+  "metadata_source": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE213nnn/GSE213957/suppl/GSE213957_THP1-CaRPool-seq.metadata.tsv.gz",
+  "archive_sha256": "0e13c092c8128cd71406ce24c6d92a662651125cbbd886fd5af038eec86c199f",
+  "metadata_sha256": "878b3ad4a86f65e20494baf1761753ce72f28f708186c7ea96b710952e1f0c79",
+  "metadata_cells": 30707,
+  "retained_cells": 30707,
+  "excluded_same_gene_cells": 0,
+  "conditions": 187,
+  "source_expression_genes": 20639,
+  "selected_genes": 5000,
+  "selection": "Top 5000 variance genes in non-targeting control cells only; stable tie order.",
+  "normalization": "Primary raw Gene Expression counts; per-cell library normalized to 10000, then natural log1p.",
+  "lane_counts": [
+    {
+      "lane": 1,
+      "cells": 3467,
+      "control_cells": 51
+    },
+    {
+      "lane": 2,
+      "cells": 8248,
+      "control_cells": 118
+    },
+    {
+      "lane": 3,
+      "cells": 8304,
+      "control_cells": 103
+    },
+    {
+      "lane": 4,
+      "cells": 10688,
+      "control_cells": 152
+    }
+  ],
+  "intervention": "Cas13 RNA knockdown; THP1; not Norman CRISPRa/K562.",
+  "join": "Every eligible metadata barcode found exactly in lane-prefix count barcode join.",
+  "pseudobulk_sha256": "d961a9e599a5c3c8e819fa6735d321d12f286d14fa40ce8000a5f4264a1cd5d9",
+  "uncertainty": "Cell standard errors are descriptive, not biological replicate intervals."
+}
