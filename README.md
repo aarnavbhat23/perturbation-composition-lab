@@ -2,11 +2,15 @@
 
 [![Reproduction checks](https://github.com/aarnavbhat23/perturbation-composition-lab/actions/workflows/composition.yml/badge.svg)](https://github.com/aarnavbhat23/perturbation-composition-lab/actions/workflows/composition.yml)
 
-Can measured single-gene responses predict an unseen two-gene combination?
+**If you know what happens to a cell when you switch on gene A, and separately when you switch on gene B, can you predict what happens when you switch on both?**
 
-This project aggregates **91,205 cells across 5,045 genes** from the GEARS-preprocessed Norman CRISPRa dataset. It compares no perturbation, single-gene additivity, a ridge residual model, and a permutation-invariant neural residual model. All cells belonging to a combination stay together; **26 complete combinations** are held out.
+**In plain English:** This repo tests that question on two public CRISPR experiments. The simplest guess, adding the two single-gene effects together, gets most of the way there. A small neural network that learns the leftover interaction lowers the error further: about 15% in the main split, and on every random split of both datasets. But a plain linear (ridge) model is nearly as good, and on some harder holdouts the neural model does not win. Every split, checkpoint and per-pair result is released so anyone can rerun it, and the model can be [run as a Latch workflow](#run-on-latch).
 
 ![Combination prediction experiment](results/combinations.png)
+
+*Left: average prediction error on 26 held-out gene pairs (lower is better). Right: each dot is one held-out pair; dots below the dashed line are pairs where the neural model beat simple addition.*
+
+**Technical summary.** This project aggregates **91,205 cells across 5,045 genes** from the GEARS-preprocessed Norman CRISPRa dataset. It compares no perturbation, single-gene additivity, a ridge residual model, and a permutation-invariant neural residual model. All cells belonging to a combination stay together; **26 complete combinations** are held out.
 
 ## Independent experiment and repeated partitions
 
@@ -71,6 +75,16 @@ python plot.py
 ```
 
 The compact pseudobulk reference, preprocessing arrays, trained heads, exact held-out profiles and metric tables are included. The large upstream cell matrix is downloaded separately. `predict.py` requires both genes to have measured single-gene reference profiles, rejects repeated/unknown genes, and returns processed-expression deltas for every supplied gene. It does not generate cells or predict arbitrary new perturbation genes.
+
+## Run on Latch
+
+`wf/__init__.py` wraps `predict.py` and the released Norman heads as a [Latch](https://latch.bio) workflow: enter two genes, get the per-gene CSV back. The built-in test data is CEBPA + KLF1, one of the 26 held-out test pairs. No training happens in the workflow.
+
+```bash
+pip install latch
+latch login
+latch register --remote .
+```
 
 ## The experiment
 
